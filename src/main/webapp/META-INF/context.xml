@@ -16,7 +16,7 @@
 
               connectionProperties="useUnicode=yes;characterEncoding=utf8;"
 
-              url="jdbc:mysql://localhost:3306/workshop2"
+              url="jdbc:mysql://localhost:3306/workshop2?useSSL=false"
 
               maxTotal="100"
 
