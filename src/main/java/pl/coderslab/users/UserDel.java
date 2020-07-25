@@ -12,30 +12,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/user/add")
-public class UserAdd  extends HttpServlet {
-    public static final Logger log = LogManager.getLogger(UserAdd.class);
+@WebServlet("/user/delete")
+public class UserDel extends HttpServlet {
+    public static final Logger log = LogManager.getLogger(UserDel.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        getServletContext().getRequestDispatcher("/users/add.jsp")
-                .forward(req, resp);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
 
-        String imie = req.getParameter("imie");
-        String mail = req.getParameter("mail");
-        String haslo = req.getParameter("haslo");
-
-        log.debug(imie+" "+haslo+" "+mail);
-        User newUser = new User(mail, imie, haslo);
+        String userId = req.getParameter("userId");
+        int i = Integer.parseInt(userId);
         UserDao newUserDao = new UserDao();
-        newUserDao.create(newUser);
+        newUserDao.delete(i);
 
         resp.sendRedirect("/user/list");
 

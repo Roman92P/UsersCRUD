@@ -42,9 +42,9 @@
                                         <c:out value="${user.email}" />
                                     </td>
                                     <td>
-                                        <a href="action">Remove</a>
-                                        <a href="action">Edit</a>
-                                        <a href="action">Show</a>
+                                        <a href="/user/delete?userId=${user.id}">Remove</a>
+                                        <a href="/user/edit?userId=${user.id}">Edit</a>
+                                        <a href="/user/show?userId=${user.id}">Show</a>
                                     </td>
                                 </tr>
                             </c:forEach>
@@ -53,25 +53,6 @@
                         </table>
                     </div>
                 </div>
-
-
-
                 <!--Koniec listy użytkowników-->
-                <!-- Content Row -->
-                <!--          <div class="row">-->
-                <!--            &lt;!&ndash; Content Column &ndash;&gt;-->
-                <!--            <div class="col-lg-6 mb-4">-->
-                <!--              &lt;!&ndash; Project Card Example &ndash;&gt;-->
-                <!--              &lt;!&ndash; Color System &ndash;&gt;-->
-                <!--            </div>-->
-                <!--            <div class="col-lg-6 mb-4">-->
-                <!--            </div>-->
-                <!--          </div>-->
-
-<%--            </div>--%>
-            <!-- /.container-fluid -->
-
-<%--        </div>--%>
-        <!-- End of Main Content -->
 
 <%@ include file="/footer.jsp" %>

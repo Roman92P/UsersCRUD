@@ -30,7 +30,7 @@
     <label>Hasło</label>
     <input class="form-control" type="text" name="haslo" placeholder="Podaj hasło">
 
-        <button type="submit" class="btn-primary">Wyślij</button>
+        <button type="submit" class="btn-primary">Utwórz</button>
     </form>
 
 
